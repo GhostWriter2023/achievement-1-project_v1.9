@@ -224,6 +224,37 @@ button:focus,
   opacity: 0.8; /* reduces the opacity of the button to 80% */
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup p {
+  margin: 0;
+}
+
+.close-button {
+  background-color: #f44336; /* Red */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .grid__item {
   display: inline-block;
   width: 33%;
@@ -255,13 +286,79 @@ button:focus,
     transform: scale(1.05);
   }
 
-  .grid__item:last-child {
+/*  .grid__item:last-child { // Places the last grid item in the 4th column and spans it across 3 rows, making it different in size compared to other grid items.
     -ms-grid-column: 4;
     grid-column: 4 / 4;
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / 4;
-  }
+  }*/
+}
+
+footer.profile {
+  background-color: #d3d3d3; /* Grey background for contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 20px; /* Spacing inside the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Center the form with some margin */
+  max-width: 600px; /* Restrict width for better readability */
+}
+
+footer.profile h1 {
+  font-size: 24px; /* Slightly smaller than the main heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+footer.profile ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+footer.profile li {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+footer.profile label {
+  display: block; /* Full width for labels */
+  font-weight: bold; /* Bold text for labels */
+  margin-bottom: 5px; /* Space below labels */
+  color: #333; /* Darker text color for better readability */
+}
+
+footer.profile input[type="email"],
+footer.profile input[type="tel"],
+footer.profile textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 4px; /* Rounded corners for input fields */
+  font-size: 16px; /* Font size for input fields */
+}
+
+footer.profile textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px; /* Minimum height for the textarea */
+}
+
+footer.profile input[type="submit"] {
+  background-color: #357b70; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for the button */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+footer.profile input[type="submit"]:hover {
+  background-color: #2e6a5c; /* Darker background on hover */
+}
+
+footer.profile input[type="submit"]:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.5); /* Custom focus outline */
 }
 
 .page-footer {
